@@ -1,3 +1,5 @@
+\set ON_ERROR_STOP on
+
 -- ============================================================
 -- IMPORT AUTOMATIQUE DES DONNÉES CSV
 -- Projet : SportDataPulse - Ligue 1 2025
@@ -48,7 +50,6 @@ COPY performance(
                  id_joueur,
                  buts,
                  passes_decisives,
-                 buts_plus_passes,
                  buts_hors_penalties,
                  penalties_marques,
                  penalties_tentes,
@@ -62,8 +63,7 @@ COPY attendu(
              id_joueur,
              xg,
              npxg,
-             xag,
-             npxg_xag
+             xag
     )
     FROM '/data/attendu.csv'
     WITH (FORMAT csv, HEADER true, DELIMITER ';');
