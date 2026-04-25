@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS performance (
     id_joueur           INT PRIMARY KEY,
     buts                INT NOT NULL CHECK (buts >= 0),
     passes_decisives    INT NOT NULL CHECK (passes_decisives >= 0),
-    buts_plus_passes    INT NOT NULL CHECK (buts_plus_passes >= 0),
+    buts_plus_passes    INT GENERATED ALWAYS AS (buts + passes_decisives) STORED,
     buts_hors_penalties INT NOT NULL CHECK (buts_hors_penalties >= 0),
     penalties_marques   INT NOT NULL CHECK (penalties_marques >= 0),
     penalties_tentes    INT NOT NULL CHECK (penalties_tentes >= 0),
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS attendu (
     xg        NUMERIC(6, 2) NOT NULL CHECK (xg >= 0),
     npxg      NUMERIC(6, 2) NOT NULL CHECK (npxg >= 0),
     xag       NUMERIC(6, 2) NOT NULL CHECK (xag >= 0),
-    npxg_xag  NUMERIC(6, 2) NOT NULL CHECK (npxg_xag >= 0),
+    npxg_xag  NUMERIC(6, 2) GENERATED ALWAYS AS (npxg + xag) STORED,
     CONSTRAINT fk_attendu_joueur
        FOREIGN KEY (id_joueur) REFERENCES joueur (id_joueur)
            ON DELETE CASCADE
