@@ -438,3 +438,16 @@ Pour ce projet, utilise surtout :
 5. `docker exec -i ligue1-postgres psql -U postgres -d ligue1_2025 -f /sql/import_data.sql`
 6. `docker compose down`
 7. `docker compose down -v` pour repartir proprement
+
+# Ajouter les commandes d’exécution et d’export
+
+Pour lancer tout le fichier :
+
+```bash
+docker exec -i ligue1-postgres psql -U postgres -d ligue1_2025 -f /sql/requetes_metier.sql
+```
+
+Pour exporter les résultats dans un fichier texte, pratique pour garder une preuve :
+```bash
+docker exec -i ligue1-postgres psql -U postgres -d ligue1_2025 -f /sql/requetes_metier.sql > resultats_requetes.txt
+```

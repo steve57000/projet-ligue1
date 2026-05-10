@@ -1,541 +1,552 @@
-﻿id_joueur;code_position;id_equipe;nom_joueur;nation;annee_naissance
-1;AT;8;Keyliane Abdallah;FRA;2006
-2;DF;16;Yunis Abdelhamid;MAR;1987
-3;MT;1;Himad Abdelli;ALG;1999
-4;DF;12;Mohamed Abdelmoneim;EGY;1999
-5;DF;12;Ali Abdi;TUN;1993
-6;AT;11;Matthis Abline;FRA;2003
-7;DF;7;Abner;BRA;2000
-8;MT;18;Zakaria Aboukhlal;MAR;2000
-9;AT;10;Akor Adams;NGA;2000
-10;MT;14;Martin Adeline;FRA;2003
-11;DF;7;Adryelson;BRA;1998
-12;DF;14;Emmanuel Agbadou;CIV;1997
-13;AT;5;Jeremy Agbonifo;SWE;2005
-14;DF;5;Ruben Aguilar;FRA;1993
-15;MT;15;Naouirou Ahamada;FRA;2002
-16;MT;1;Jean-Eudes Aholou;CIV;1994
-17;AT;16;Ayman Aiki;FRA;2005
-18;AT;3;Ludovic Ajorque;FRA;1994
-19;DF;18;Ümit Akdag;ROU;2003
-20;DF;14;Sergio Akieme;ESP;1997
-21;AT;9;Maghnes Akliouche;FRA;2002
-22;MT;7;Paul Akouokou;CIV;1997
-23;DF;2;Clément Akpa;CIV;2001
-24;AT;6;Chuba Akpom;ENG;1995
-25;AT;12;Mohamed Ali Cho;FRA;2004
-26;AT;1;Jim Allevinah;GAB;1995
-27;MT;7;Thiago Almada;ARG;2001
-28;DF;3;Jordan Amavi;FRA;1994
-29;DF;11;Kelvin Amian;FRA;1998
-30;DF;8;Michael Amir Murillo;PAN;1996
-31;DF;17;Samuel Amo-Ameyaw;ENG;2006
-32;MT;16;Mathis Amougou;FRA;2006
-33;MT;6;Benjamin André;FRA;1990
-34;DF;5;Kyllian Antonio;FRA;2008
-35;DF;16;Dennis Appiah;FRA;1992
-36;DF;1;Carlens Arcus;HAI;1996
-37;MT;6;Hákon Arnar Haraldsson;ISL;2003
-38;AT;13;Marco Asensio;ESP;1996
-39;DF;15;Lorenz Assignon;TOG;2000
-40;MT;11;Dehmaine Assoumani;FRA;2005
-41;MT;14;Valentin Atangana Edoa;FRA;2005
-42;AT;2;Florian Ayé;FRA;1997
-43;AT;4;André Ayew;GHA;1989
-44;MT;5;Neil El Aynaoui;FRA;2001
-45;MT;18;Shavy Babicka;GAB;2000
-46;DF;5;Juma Bah;SLE;2006
-47;AT;2;Theo Bair;CAN;1999
-48;AT;6;Mitchel Bakker;NED;2000
-49;DF;8;Darryl Bakola;FRA;2007
-50;MT;17;Dilane Bakwa;FRA;2002
-51;DF;8;Leonardo Balerdi;ARG;1999
-52;DF;4;Fodé Ballo-Touré;SEN;1997
-53;AT;9;Folarin Balogun;USA;2001
-54;DF;1;Abdoulaye Bamba;CIV;1990
-55;MT;14;Mohamed Bamba;CIV;2004
-56;MT;17;Valentín Barco;ARG;2004
-57;AT;13;Bradley Barcola;FRA;2002
-58;DF;12;Melvin Bard;FRA;2000
-59;MT;10;Gabriel Bares;SUI;2000
-60;DF;16;Dylan Batubinsika;COD;1996
-61;MT;1;Haris Belkebla;ALG;1994
-62;MT;1;Yassin Belkhdim;FRA;2002
-63;MT;9;Eliesse Ben Seghir;MAR;2005
-64;MT;8;Ismaël Bennacer;ALG;1997
-65;AT;7;Saïd Benrahma;ALG;1995
-66;MT;6;Nabil Bentaleb;ALG;1994
-67;DF;13;Lucas Beraldo;BRA;2003
-68;DF;16;Maxime Bernauer;FRA;1998
-69;GB;10;Dimitry Bertaud;COD;1998
-70;AT;9;Mika Biereth;DEN;2003
-71;DF;1;Emmanuel Biumla;FRA;2005
-72;GB;3;Marco Bizot;NED;1991
-73;MT;15;Ludovic Blas;FRA;1997
-74;AT;16;Augustine Boakye;GHA;2000
-75;MT;4;Mathéo Bodmer;FRA;2004
-76;MT;12;Jeremie Boga;CIV;1997
-77;DF;12;Moïse Bombito;CAN;2000
-78;MT;9;Saïmon Bouabré;FRA;2006
-79;MT;6;Ayyoub Bouaddi;FRA;2007
-80;MT;12;Badredine Bouanani;ALG;2004
-81;MT;16;Benjamin Bouchouari;MAR;2001
-82;MT;12;Hicham Boudaoui;ALG;1999
-83;DF;3;Justin Bourgault;FRA;2005
-84;MT;15;Benjamin Bourigeaud;FRA;1994
-85;MT;12;Bilal Brahimi;ALG;2000
-86;DF;8;Lilian Brassier;FRA;1999
-88;DF;16;Anthony Briançon;FRA;1994
-89;DF;14;Aurélio Buta;POR;1997
-90;GB;12;Marcin Bułka;POL;1999
-91;AT;6;Rémy Cabella;FRA;1990
-92;MT;16;Mathieu Cafaro;FRA;1997
-93;DF;7;Duje Ćaleta-Car;CRO;1996
-94;MT;12;Issiaga Camara;GUI;2005
-95;MT;9;Lamine Camara;SEN;2004
-96;MT;3;Mahdi Camara;FRA;1998
-97;DF;1;Ousmane Camara;FRA;2003
-98;MT;3;Axel Camblan;FRA;2003
-99;DF;18;Jaydee Canvot;FRA;2006
-100;MT;1;Pierrick Capelle;FRA;1987
-101;AT;5;Gabin Capuano;FRA;2006
-102;MT;7;Maxence Caqueret;FRA;2000
-103;MT;10;Simon Cara;FRA;2005
-104;MT;8;Valentin Carboni;ARG;2005
-105;AT;16;Irvin Cardona;FRA;1997
-106;GB;11;Patrik Carlgren;SWE;1992
-107;AT;4;Josué Casimir;FRA;2001
-108;MT;18;Cristian Cásseres Jr.;VEN;2000
-109;DF;11;Jean-Charles Castelletto;CMR;1995
-110;MT;1;Enzo Caumont;FRA;2004
-111;DF;11;Fabien Centonze;FRA;1996
-112;DF;3;Brendan Chardonnet;FRA;1994
-113;DF;5;Jhoanner Chávez;ECU;2002
-114;DF;10;Théo Chennahi;FRA;2005
-115;AT;1;Sidiki Cherif;FRA;2006
-116;AT;7;Rayan Cherki;FRA;2003
-117;GB;6;Lucas Chevalier;FRA;2001
-118;MT;11;Pedro Chirivella;ESP;1997
-119;MT;10;Joris Chotard;FRA;2001
-120;MT;15;Djaoui Cissé;FRA;2004
-121;MT;2;Yoann Cissé;FRA;2004
-122;DF;12;Jonathan Clauss;FRA;1992
-123;DF;11;Marcus Coco;FRA;1996
-124;MT;4;Alois Confais;FRA;1996
-125;MT;11;Francis Coquelin;FRA;1991
-126;DF;8;Derek Cornelius;CAN;1997
-127;DF;16;Pierre Cornud;FRA;1996
-128;MT;5;David Costa;POR;2001
-129;DF;18;Logan Costa;CPV;2001
-130;GB;3;Grégoire Coudert;FRA;1999
-131;AT;2;Lasso Coulibaly;GHA;2002
-132;MT;9;Mamadou Coulibaly;FRA;2004
-133;DF;3;Soumaïla Coulibaly;FRA;2003
-134;AT;10;Tanguy Coulibaly;FRA;2001
-135;MT;1;Marius Courcoul;FRA;2007
-136;DF;11;Nicolas Cozza;FRA;1999
-137;DF;18;Charlie Cresswell;ENG;2002
-138;MT;2;Kévin Danois;FRA;2004
-139;DF;5;Kevin Danso;AUT;1998
-140;DF;12;Dante;BRA;1983
-141;MT;17;Pape Daouda Diongue;SEN;
-142;AT;14;Mohamed Daramy;DEN;2002
-143;AT;6;Jonathan David;CAN;2000
-144;AT;16;Zuriko Davitashvili;GEO;2001
-145;GB;2;Théo De Percin;MTQ;2001
-146;DF;14;Thibault De Smet;BEL;1998
-147;DF;8;Amar Dedić;BIH;2002
-148;AT;3;Romain Del Castillo;FRA;1996
-149;DF;17;Thomas Delaine;FRA;1992
-150;AT;10;Andy Delort;ALG;1991
-151;AT;13;Ousmane Dembélé;FRA;1997
-152;GB;7;Rémy Descamps;FRA;1996
-153;GB;4;Arthur Desmas;FRA;1994
-154;AT;14;Mamadou Diakhon;FRA;2005
-155;DF;6;Bafodé Diakité;FRA;2001
-156;AT;14;Oumar Diakité;CIV;2003
-157;MT;17;Habib Diarra;SEN;2004
-158;DF;9;Krépin Diatta;SEN;1999
-159;AT;4;Kandet Diawara;GUI;2000
-160;MT;4;Mahamadou Diawara;FRA;2005
-162;AT;1;Bamba Dieng;SEN;2000
-163;DF;5;Kembo Diliwidi;FRA;2006
-164;DF;2;Sinaly Diomande;CIV;2001
-165;AT;1;Lois Diony;FRA;1992
-166;AT;3;Sérigné Diop;SEN;2005
-167;MT;12;Sofiane Diop;FRA;2000
-168;MT;5;Andy Diouf;FRA;2003
-169;GB;14;Yehvann Diouf;FRA;1999
-170;MT;2;Assane Dioussé;SEN;1997
-171;GB;18;Álex Domínguez;ESP;1998
-172;GB;13;Gianluigi Donnarumma;ITA;1999
-173;DF;11;Sékou Doucoure;FRA;2005
-174;AT;13;Désiré Doué;FRA;2005
-175;DF;17;Guela Doué;CIV;2002
-176;MT;11;Douglas;BRA;1997
-177;DF;17;Ismaël Doukouré;FRA;2003
-178;MT;3;Kamory Doumbia;MLI;2003
-179;DF;12;Amidou Doumbouya;FRA;2007
-180;DF;11;Jean-Kevin Duverne;HAI;1997
-181;DF;10;Stefan Džodić;SRB;2005
-182;DF;18;Aron Dønnum;NOR;1998
-183;MT;18;Noah Edjouma;FRA;2005
-184;DF;1;Jacques Ekomie;GAB;2003
-185;MT;16;Pierre Ekwah Elimby;FRA;2002
-186;AT;11;Meschak Elia;COD;1997
-187;AT;9;Breel Embolo;SUI;1997
-188;AT;17;Emanuel Emegha;NED;2003
-189;MT;3;Romain Faivre;FRA;1998
-190;MT;10;Khalil Fayad;FRA;2004
-191;DF;8;Luiz Felipe;ITA;1997
-192;AT;1;Zinedine Ferhat;ALG;1993
-193;MT;3;Edimilson Fernandes;SUI;1996
-194;AT;6;Matias Fernandez-Pardo;BEL;2005
-195;MT;10;Jordan Ferri;FRA;1992
-196;MT;17;Karol Fila;POL;1998
-197;AT;7;Malick Fofana;BEL;2005
-198;AT;5;Rayan Fofana;FRA;2006
-199;MT;15;Seko Fofana;CIV;1995
-200;GB;1;Yahia Fofana;CIV;2000
-201;MT;16;Lamine Fomba;FRA;1998
-202;DF;5;Przemysław Frankowski;POL;1995
-203;MT;5;Angelo Fulgini;FRA;1996
-204;AT;15;Kyogo Furuhashi;JPN;1995
-205;GB;15;Gauthier Gallon;FRA;1993
-206;AT;11;Ignatius Ganago;CMR;1999
-207;DF;8;Ulisses Garcia;SUI;1996
-208;MT;11;Jean-Philippe Gbamin;CIV;1995
-209;DF;14;Mory Gbane;CIV;2000
-210;MT;18;Yann Gboho;FRA;2001
-211;MT;18;Denis Genreau;AUS;1999
-212;MT;9;Aleksandr Golovin;RUS;1996
-213;MT;6;André Gomes;POR;1993
-214;MT;6;Angel Gomes;ENG;2000
-215;MT;15;Carlos Gómez;COL;2002
-216;GB;4;Mathieu Gorgelin;FRA;1990
-217;AT;8;Amine Gouiri;ALG;2000
-219;DF;5;Jonathan Gradit;FRA;1992
-220;MT;4;Samuel Grandsir;FRA;1996
-221;AT;8;Mason Greenwood;ENG;2001
-222;MT;15;Albert Grønbaek;DEN;2001
-223;DF;6;Gabriel Gudmundsson;SWE;1999
-224;AT;10;Axel Gueguin;FRA;2005
-225;AT;12;Evann Guessand;CIV;2001
-226;AT;11;Bahereba Guirassy;FRA;2006
-227;DF;3;Massadio Haïdara;MLI;1992
-228;DF;13;Achraf Hakimi;MAR;1998
-229;DF;1;Florent Hanin;ALG;1990
-230;MT;8;Amine Harit;MAR;1997
-231;DF;15;Hans Hateboer;NED;1994
-232;GB;18;Kjetil Haug;NOR;1998
-233;DF;8;Luis Henrique;BRA;2001
-234;DF;13;Lucas Hernández;FRA;1996
-235;DF;2;Ki-Jana Hoever;NED;2002
-236;DF;1;Cédric Hountondji;BEN;1994
-237;AT;4;Ilyes Housni;FRA;2005
-238;MT;8;Pierre Højbjerg;DEN;1995
-239;AT;14;Hafiz Ibrahim;NGA;2005
-240;AT;9;George Ilenikhena;FRA;2006
-241;MT;12;Rareş Ilie;ROU;2003
-242;DF;6;Ismaily;BRA;1990
-243;MT;10;Yanis Issoufou;FRA;2006
-244;AT;14;Junya Ito;JPN;1993
-245;DF;15;Jérémy Jacquet;FRA;2005
-246;DF;9;Ismail Jakobs;SEN;1999
-247;MT;15;Jordan James;WAL;2004
-248;DF;14;Malcolm Jeng;SWE;2005
-249;MT;14;John Joe;IRL;2003
-250;GB;17;Karl-Johan Johnsson;SWE;1990
-251;DF;2;Paul Joly;FRA;2000
-252;AT;15;Jota;POR;1999
-253;MT;4;Antoine Joujou;FRA;2003
-254;DF;2;Jubal;BRA;1993
-255;MT;2;Hamed Junior Traorè;CIV;2000
-256;MT;14;Yaya Kader Fofana;MLI;2004
-257;MT;11;Tino Kadewere;ZIM;1996
-258;AT;15;Arnaud Kalimuendo;FRA;2002
-259;AT;1;Justin-Noël Kalumba;FRA;2004
-260;DF;18;Waren Kamanzi;NOR;2000
-261;MT;15;Glen Kamara;FIN;1995
-262;DF;13;Noham Kamara;FRA;2007
-263;MT;17;Nordine Kandil;FRA;2001
-264;AT;13;Lee Kang-in;KOR;2001
-265;MT;4;Yassine Kechta;MAR;2002
-266;DF;9;Thilo Kehrer;GER;1996
-267;MT;14;Reda Khadra;GER;2001
-268;AT;10;Wahbi Khazri;TUN;1991
-269;DF;5;Abdukodir Khusanov;UZB;2004
-270;DF;13;Presnel Kimpembe;FRA;1995
-271;AT;18;Joshua King;NOR;1992
-272;DF;14;Cédric Kipré;CIV;1996
-273;GB;5;Hervé Koffi;BFA;1996
-274;GB;9;Philipp Köhn;SUI;1998
-275;AT;4;Koka;EGY;1993
-276;AT;13;Randal Kolo Muani;FRA;1998
-277;DF;8;Geoffrey Kondogbia;CTA;1993
-278;DF;14;Abdoul Koné;FRA;2005
-279;MT;14;Amadou Koné;MLI;2005
-280;MT;8;Ismaël Koné;CAN;2002
-282;DF;8;Emmanuel Koum Mbondo;FRA;2006
-283;DF;10;Boubakar Kouyaté;MLI;1997
-284;AT;5;Goduine Koyalipou;CTA;2000
-285;DF;7;Sael Kumbedi;FRA;2005
-286;MT;4;Daler Kuzyaev;RUS;1993
-287;AT;13;Khvicha Kvaratskhelia;GEO;2001
-288;AT;5;Rémy Labeau Lascary;GLP;2003
-289;AT;12;Gaëtan Laborde;FRA;1994
-290;AT;7;Alexandre Lacazette;FRA;1991
-291;MT;6;Younes Lachaab;FRA;2005
-292;GB;11;Alban Lafont;FRA;1999
-293;DF;3;Kenny Lala;MAD;1991
-294;AT;6;Mohamed Lamine Bayo;GUI;1998
-295;GB;16;Gautier Larsonneur;FRA;1997
-296;DF;3;Julien Le Cardinal;FRA;1997
-297;AT;3;Jérémy Le Douaron;FRA;1998
-298;GB;10;Benjamin Lecomte;FRA;1991
-299;MT;3;Pierre Lees-Melou;FRA;1993
-300;DF;1;Jordan Lefort;FRA;1993
-301;MT;17;Félix Lemaréchal;FRA;2003
-302;GB;2;Donovan Léon;GUF;1992
-303;AT;1;Esteban Lepaul;FRA;2000
-304;MT;11;Johann Lepenant;FRA;2002
-305;MT;11;Louis Leroux;FRA;2006
-306;DF;8;Pol Lirola;ESP;1997
-307;DF;4;Gautier Lloris;FRA;1995
-308;DF;3;Bradley Locko;FRA;2002
-309;AT;4;Elysée Logbo;FRA;2004
-310;GB;11;Anthony Lopes;POR;1990
-311;MT;12;Jordan Lotomba;SUI;1998
-312;DF;12;Tom Louchet;FRA;2003
-313;AT;17;Milos Lukovic;SRB;2005
-314;AT;10;Othmane Maamma;MAR;2005
-315;DF;5;Deiver Machado;COL;1993
-316;AT;1;Lanroy Machine;FRA;2005
-317;DF;16;Yvann Macon;FRA;1998
-318;DF;2;Eros Maddy;NED;2001
-319;MT;9;Soungoutou Magassa;FRA;2003
-320;MT;3;Hugo Magnetti;FRA;1998
-321;AT;18;Frank Magri;CMR;1999
-322;DF;7;Ainsley Maitland-Niles;ENG;1997
-323;GB;9;Radosław Majecki;POL;1999
-324;AT;3;Hamidou Makalou;MLI;2006
-325;DF;10;Nikola Maksimović;SRB;1991
-326;AT;6;Aaron Malouda;FRA;2005
-327;MT;3;Hianga Mananga Mbock;FRA;1999
-328;GB;15;Steve Mandanda;FRA;1985
-329;DF;6;Aïssa Mandi;ALG;1991
-330;MT;7;Orel Mangala;BEL;1998
-331;AT;17;Sekou Mara;FRA;2002
-332;DF;13;Marquinhos;BRA;1994
-333;MT;14;Ange Martial Tia;MLI;2006
-334;MT;3;Jonas Martin;FRA;1990
-335;MT;2;Han-Noah Massengo;FRA;2001
-336;DF;7;Clinton Mata;ANG;1992
-337;MT;9;Eliot Matazo;BEL;2002
-338;MT;7;Nemanja Matić;SRB;1988
-339;MT;2;Rudy Matondo;FRA;2008
-340;MT;15;Azor Matusiwa;NED;1998
-341;AT;8;Neal Maupay;FRA;1996
-342;DF;9;Christian Mawissa;FRA;2005
-343;MT;13;Senny Mayulu;FRA;2006
-344;MT;6;Ethan Mbappé;FRA;2006
-345;AT;13;Ibrahim Mbaye;FRA;2008
-346;DF;18;Mark McKenzie;USA;1999
-347;DF;5;Facundo Medina;ARG;1999
-348;AT;15;Henrik Meister;DEN;2003
-349;DF;10;Bamo Meïté;CIV;2001
-351;AT;15;Mohamed Meité;FRA;2007
-352;AT;1;Farid El Melali;ALG;1997
-353;DF;13;Nuno Mendes;POR;2002
-354;DF;12;Antoine Mendy;SEN;2004
-355;MT;5;Nampalys Mendy;SEN;1992
-356;DF;2;Gideon Mensah;GHA;1998
-357;DF;8;Quentin Merlin;FRA;2002
-358;DF;18;Rafik Messali;FRA;2003
-359;DF;6;Thomas Meunier;BEL;1991
-360;AT;9;Lucas Michal;FRA;2005
-361;AT;7;Georges Mikautadze;GEO;2000
-362;AT;16;Igor Miladinović;SRB;2003
-363;MT;9;Takumi Minamino;JPN;1995
-364;DF;10;Lucas Mincarelli;FRA;2004
-365;AT;12;Terem Moffi;NGA;1999
-366;AT;11;Mostafa Mohamed;EGY;1997
-367;MT;11;Florent Mollet;FRA;1991
-368;DF;17;Diego Moreira;POR;2004
-369;MT;14;Gabriel Moscardo;BRA;2005
-370;DF;10;Yael Mouanga;FRA;2005
-371;MT;16;Aimen Moueffek;FRA;2001
-372;AT;12;Youssoufa Moukoko;GER;2004
-373;MT;16;Louis Mouton;FRA;2002
-374;MT;6;Ngal'Ayel Mukau;COD;2004
-375;MT;14;Marshall Munetsi;ZIM;1996
-376;MT;9;Almoatasem Al Musrati;LBY;1996
-377;MT;4;Junior Mwanga;FRA;2003
-379;DF;2;Loïc N'Gatta;FRA;2003
-380;AT;16;Djylian N'Guessan;FRA;2008
-381;DF;16;Mickael Nade;FRA;1999
-382;MT;8;Bilal Nadir;MAR;2003
-383;DF;15;Mahamadou Nagida;CMR;2005
-384;AT;14;Keito Nakamura;JPN;2000
-385;MT;17;Sebastian Nanasi;SWE;2002
-386;DF;12;Yael Nandjou;FRA;2005
-387;DF;12;Youssouf Ndayishimiye;BDI;1998
-388;AT;10;Junior Ndiaye;FRA;2005
-389;MT;4;Rassoul Ndiaye;SEN;2001
-390;DF;10;Wilfried Ndollo;CMR;2005
-391;MT;12;Tanguy Ndombele;FRA;1996
-392;DF;4;Loïc Nego;HUN;1991
-393;MT;13;João Neves;POR;2004
-394;DF;15;Mikayil Ngor Faye;SEN;2004
-395;AT;4;Steve Ngoura;FRA;2005
-396;AT;12;Bernard Nguene;CMR;2006
-397;DF;7;Moussa Niakhate;SEN;1996
-398;DF;3;Abdoulaye Niakhate Ndiaye;SEN;2002
-399;AT;1;Ibrahima Niane;SEN;1999
-400;DF;18;Rasmus Nicolaisen;DEN;1997
-401;AT;10;Arnaud Nordin;FRA;1998
-402;MT;11;Plamedi Nsingi;;2000
-403;AT;7;Ernest Nuamah;GHA;2003
-404;MT;10;Rabby Nzingoula;CGO;2005
-405;AT;5;M'Bala Nzola;ANG;1996
-406;DF;16;Marwann Nzuzi;FRA;2004
-407;MT;5;Hamzat Ojediran;NGA;2003
-408;DF;14;Joseph Okumu;KEN;1997
-409;MT;15;Kazeem Olaigbe;BEL;2003
-410;AT;16;Ben Old;NZL;2002
-411;DF;7;Warmed Omari;COM;2000
-412;DF;10;Becir Omeragic;SUI;2002
-413;DF;17;Andrew Omobamidele;IRL;2002
-414;MT;2;Ado Onaiwu;JPN;1995
-415;DF;4;Christopher Operi;CIV;1997
-416;DF;2;Fredrik Oppegard;NOR;2002
-417;AT;12;Victor Orakpo;NGA;2006
-418;MT;14;Ike Orazi;IRL;2007
-419;AT;7;Gift Orban;NGA;2002
-420;DF;2;Gabriel Osho;NGA;1998
-421;AT;16;Jibril Othman;TUN;2004
-422;DF;17;Guimissongui Ouattara;FRA;2005
-423;DF;9;Kassoum Ouattara;FRA;2004
-424;MT;1;Zinédine Ould Khaled;FRA;2000
-425;DF;16;Beres Owusu;FRA;2003
-426;MT;2;Elisha Owusu;GHA;1997
-427;DF;13;Willian Pacho;ECU;2001
-428;DF;11;Nicolas Pallois;FRA;1987
-429;AT;10;Nicolas Pays;FRA;2003
-430;DF;16;Kévin Pedro;FRA;2006
-431;AT;14;Jordan Pefok;USA;1996
-432;DF;2;Théo Pellenard;FRA;1994
-433;DF;4;Timothee Pembele;FRA;2002
-434;AT;8;Faris Pemi Moumbagna;CMR;2000
-435;MT;17;Óscar Perea;COL;2005
-436;AT;3;Mathias Pereira Lage;POR;1996
-437;GB;7;Lucas Perri;BRA;1997
-438;MT;2;Gaëtan Perrin;FRA;1996
-439;MT;1;Prosper Peter;NGA;2007
-440;DF;16;Léo Pétrot;FRA;1997
-441;GB;17;Đorđe Petrović;SRB;1999
-442;DF;5;Tom Pouilly;FRA;2003
-443;MT;8;Adrien Rabiot;FRA;1995
-444;AT;13;Gonçalo Ramos;POR;2001
-445;DF;1;Lilian Raolisoa;FRA;2000
-446;MT;2;Rayan Raveloson;MAD;1997
-447;GB;18;Guillaume Restes;FRA;2005
-448;DF;6;Alexsandro Ribeiro;BRA;1999
-449;MT;7;Alejandro Rodriguez;POR;2008
-450;MT;8;Valentin Rongier;FRA;1994
-451;MT;12;Pablo Rosario;NED;1997
-452;DF;15;Anthony Rouault;FRA;2001
-453;AT;8;Jon Rowe;ENG;2003
-454;MT;13;Fabián Ruiz Peña;ESP;1996
-455;GB;8;Gerónimo Rulli;ARG;1992
-456;GB;5;Mathew Ryan;AUS;1992
-457;AT;4;Emmanuel Sabbi;USA;1997
-458;DF;10;Falaye Sacko;MLI;1995
-459;GB;13;Matvei Safonov;RUS;1999
-460;DF;10;Modibo Sagnan;MLI;1999
-461;AT;6;Osame Sahraoui;MAR;2001
-462;AT;5;Wesley Saïd;FRA;1995
-463;DF;10;Théo Sainte-Luce;FRA;1998
-464;AT;3;Ibrahim Salah;MAR;2001
-465;AT;14;Amine Salama;FRA;2000
-466;DF;9;Mohammed Salisu;GHA;1999
-467;DF;4;Yoann Salmier;GUF;1992
-468;AT;7;Mama Samba Baldé;GNB;1995
-470;GB;15;Brice Samba;FRA;1994
-472;DF;4;Arouna Sangante;SEN;2002
-473;DF;14;Nhoa Sangui;FRA;2006
-474;MT;12;Morgan Sanson;FRA;1994
-475;MT;12;Baptiste Santamaria;FRA;1995
-477;MT;17;Andrey Santos;BRA;2004
-478;DF;6;Tiago Santos;POR;2002
-479;DF;5;Malang Sarr;FRA;1999
-480;DF;17;Mamadou Sarr;FRA;2005
-481;AT;5;Martin Satriano;URU;2001
-482;MT;10;Téji Savanier;FRA;1991
-483;MT;18;Niklas Schmidt;GER;1998
-484;AT;17;Jérémy Sebas;MTQ;2003
-485;DF;15;Alidu Seidu;GHA;2000
-486;DF;14;Hiroki Sekine;JPN;2002
-487;DF;17;Marvin Senaya;TOG;2001
-488;DF;18;Djibril Sidibé;FRA;1992
-489;MT;18;Vincent Sierro;SUI;1995
-490;DF;9;Caio Henrique Oliveira Silva;BRA;1997
-491;AT;3;Abdallah Sima;SEN;2001
-492;AT;11;Moses Simon;NGA;1995
-493;AT;2;Lassine Sinayoko;MLI;1999
-494;DF;9;Wilfried Singo;CIV;2000
-495;AT;15;Ayanda Sishuba;BEL;2005
-496;AT;16;Ibrahim Sissoko;MLI;1995
-497;AT;14;Niama Sissoko;MLI;2005
-498;DF;15;Leo Skiri Østigård;NOR;1999
-499;DF;13;Milan Škriniar;SVK;1995
-500;AT;18;Naatan Skyttä;FIN;2002
-501;DF;17;Eduard Sobol;UKR;1995
-502;AT;5;Florian Sotoca;FRA;1990
-503;AT;4;Issa Soumaré;SEN;2000
-504;DF;17;Saidou Sow;GUI;2002
-506;AT;16;Lucas Stassin;BEL;2004
-507;AT;8;Enzo Sternal;FRA;2007
-508;DF;18;Gabriel Suazo;CHI;1997
-509;DF;17;Abakar Sylla;CIV;2002
-510;DF;10;Issiaga Sylla;GUI;1994
-511;AT;10;Musa Al-Taamari;JOR;1997
-513;DF;7;Nicolás Tagliafico;ARG;1992
-514;DF;13;Axel Tapé;FRA;2007
-515;MT;16;Florian Tardieu;FRA;1992
-516;MT;4;Oussama Targhalline;MAR;2002
-517;DF;10;Enzo Tchato;CMR;2002
-518;GB;13;Arnau Tenas;ESP;2001
-519;MT;7;Tanner Tessmann;USA;2001
-520;MT;14;Teddy Teuma;MLT;1993
-521;DF;9;Jordan Teze;NED;1999
-522;AT;11;Sorba Thomas;WAL;1999
-523;MT;5;Adrien Thomasson;FRA;1993
-524;MT;7;Corentin Tolisso;FRA;1994
-525;MT;4;Abdoulaye Touré;GUI;1994
-526;MT;10;Birama Touré;MLI;1992
-527;DF;6;Ousmane Toure;FRA;2005
-528;DF;15;Adrien Truffert;FRA;2001
-529;DF;9;Vanderson;BRA;2001
-530;AT;8;Robinio Vaz;FRA;2007
-531;MT;7;Jordan Veretout;FRA;1993
-532;MT;2;Ben Viadere;FRA;2005
-533;MT;13;Vitinha;POR;2000
-534;AT;16;Ibrahima Wadji;SEN;1995
-535;AT;8;Elye Wahi;FRA;2003
-536;DF;17;Caleb Wiley;USA;2004
-537;DF;15;Christopher Wooh;CMR;2001
-538;DF;4;Etienne Youte Kinkoue;FRA;2002
-539;DF;14;Eloge Zabi;CIV;2006
-540;DF;13;Yoram Zague;FRA;2006
-541;AT;7;Wilfried Zaha;CIV;1992
-542;MT;13;Warren Zaïre-Emery;FRA;2006
-543;MT;18;Miha Zajc;SVN;1994
-544;MT;9;Denis Zakaria;SUI;1996
-545;AT;5;Anass Zaroury;MAR;2000
-546;DF;11;Nathan Zeze;FRA;2005
-547;AT;6;Edon Zhegrova;KVX;1999
-548;DF;3;Luc Zogbé;CIV;2005
-549;MT;2;Aristide Zossou;CIV;2005
-550;DF;4;Yanis Zouaoui;ALG;1994
-551;DF;2;Edhy Zuliani;ITA;2004
+﻿ID;Pos_Principale;ID Equipe;Joueur;Nation;Naissance
+1;AT;8;Keyliane Abdallah;fr FRA;2006
+2;DF;16;Yunis Abdelhamid;ma MAR;1987
+3;MT;1;Himad Abdelli;dz ALG;1999
+4;DF;12;Mohamed Abdelmoneim;eg EGY;1999
+5;DF;12;Ali Abdi;tn TUN;1993
+6;AT;11;Matthis Abline;fr FRA;2003
+7;DF;7;Abner;br BRA;2000
+8;MT;18;Zakaria Aboukhlal;ma MAR;2000
+9;AT;10;Akor Adams;ng NGA;2000
+10;MT;14;Martin Adeline;fr FRA;2003
+11;DF;7;Adryelson;br BRA;1998
+12;DF;14;Emmanuel Agbadou;ci CIV;1997
+13;AT;5;Jeremy Agbonifo;se SWE;2005
+14;DF;5;Ruben Aguilar;fr FRA;1993
+15;MT;15;Naouirou Ahamada;fr FRA;2002
+16;MT;1;Jean-Eudes Aholou;ci CIV;1994
+17;AT;16;Ayman Aiki;fr FRA;2005
+18;AT;3;Ludovic Ajorque;fr FRA;1994
+19;DF;18;Ümit Akdag;ro ROU;2003
+20;DF;14;Sergio Akieme;es ESP;1997
+21;AT;9;Maghnes Akliouche;fr FRA;2002
+22;MT;7;Paul Akouokou;ci CIV;1997
+23;DF;2;Clément Akpa;ci CIV;2001
+24;AT;6;Chuba Akpom;eng ENG;1995
+25;AT;12;Mohamed Ali Cho;fr FRA;2004
+26;AT;1;Jim Allevinah;ga GAB;1995
+27;MT;7;Thiago Almada;ar ARG;2001
+28;DF;3;Jordan Amavi;fr FRA;1994
+29;DF;11;Kelvin Amian;fr FRA;1998
+30;DF;8;Michael Amir Murillo;pa PAN;1996
+31;DF;17;Samuel Amo-Ameyaw;eng ENG;2006
+32;MT;16;Mathis Amougou;fr FRA;2006
+33;MT;6;Benjamin André;fr FRA;1990
+34;DF;5;Kyllian Antonio;fr FRA;2008
+35;DF;16;Dennis Appiah;fr FRA;1992
+36;DF;1;Carlens Arcus;ht HAI;1996
+37;MT;6;Hákon Arnar Haraldsson;is ISL;2003
+38;AT;13;Marco Asensio;es ESP;1996
+39;DF;15;Lorenz Assignon;tg TOG;2000
+40;MT;11;Dehmaine Assoumani;fr FRA;2005
+41;MT;14;Valentin Atangana Edoa;fr FRA;2005
+42;AT;2;Florian Ayé;fr FRA;1997
+43;AT;4;André Ayew;gh GHA;1989
+44;MT;5;Neil El Aynaoui;fr FRA;2001
+45;MT;18;Shavy Babicka;ga GAB;2000
+46;DF;5;Juma Bah;sl SLE;2006
+47;AT;2;Theo Bair;ca CAN;1999
+48;AT;6;Mitchel Bakker;nl NED;2000
+49;DF;8;Darryl Bakola;fr FRA;2007
+50;MT;17;Dilane Bakwa;fr FRA;2002
+51;DF;8;Leonardo Balerdi;ar ARG;1999
+52;DF;4;Fodé Ballo-Touré;sn SEN;1997
+53;AT;9;Folarin Balogun;us USA;2001
+54;DF;1;Abdoulaye Bamba;ci CIV;1990
+55;MT;14;Mohamed Bamba;ci CIV;2004
+56;MT;17;Valentín Barco;ar ARG;2004
+57;AT;13;Bradley Barcola;fr FRA;2002
+58;DF;12;Melvin Bard;fr FRA;2000
+59;MT;10;Gabriel Bares;ch SUI;2000
+60;DF;16;Dylan Batubinsika;cd COD;1996
+61;MT;1;Haris Belkebla;dz ALG;1994
+62;MT;1;Yassin Belkhdim;fr FRA;2002
+63;MT;9;Eliesse Ben Seghir;ma MAR;2005
+64;MT;8;Ismaël Bennacer;dz ALG;1997
+65;AT;7;Saïd Benrahma;dz ALG;1995
+66;MT;6;Nabil Bentaleb;dz ALG;1994
+67;DF;13;Lucas Beraldo;br BRA;2003
+68;DF;16;Maxime Bernauer;fr FRA;1998
+69;GB;10;Dimitry Bertaud;cd COD;1998
+70;AT;9;Mika Biereth;dk DEN;2003
+71;DF;1;Emmanuel Biumla;fr FRA;2005
+72;GB;3;Marco Bizot;nl NED;1991
+73;MT;15;Ludovic Blas;fr FRA;1997
+74;AT;16;Augustine Boakye;gh GHA;2000
+75;MT;4;Mathéo Bodmer;fr FRA;2004
+76;MT;12;Jeremie Boga;ci CIV;1997
+77;DF;12;Moïse Bombito;ca CAN;2000
+78;MT;9;Saïmon Bouabré;fr FRA;2006
+79;MT;6;Ayyoub Bouaddi;fr FRA;2007
+80;MT;12;Badredine Bouanani;dz ALG;2004
+81;MT;16;Benjamin Bouchouari;ma MAR;2001
+82;MT;12;Hicham Boudaoui;dz ALG;1999
+83;DF;3;Justin Bourgault;fr FRA;2005
+84;MT;15;Benjamin Bourigeaud;fr FRA;1994
+85;MT;12;Bilal Brahimi;dz ALG;2000
+86;DF;8;Lilian Brassier;fr FRA;1999
+87;DF;8;Lilian Brassier;fr FRA;1999
+88;DF;16;Anthony Briançon;fr FRA;1994
+89;DF;14;Aurélio Buta;pt POR;1997
+90;GB;12;Marcin Bułka;pl POL;1999
+91;AT;6;Rémy Cabella;fr FRA;1990
+92;MT;16;Mathieu Cafaro;fr FRA;1997
+93;DF;7;Duje Ćaleta-Car;hr CRO;1996
+94;MT;12;Issiaga Camara;gn GUI;2005
+95;MT;9;Lamine Camara;sn SEN;2004
+96;MT;3;Mahdi Camara;fr FRA;1998
+97;DF;1;Ousmane Camara;fr FRA;2003
+98;MT;3;Axel Camblan;fr FRA;2003
+99;DF;18;Jaydee Canvot;fr FRA;2006
+100;MT;1;Pierrick Capelle;fr FRA;1987
+101;AT;5;Gabin Capuano;fr FRA;2006
+102;MT;7;Maxence Caqueret;fr FRA;2000
+103;MT;10;Simon Cara;fr FRA;2005
+104;MT;8;Valentin Carboni;ar ARG;2005
+105;AT;16;Irvin Cardona;fr FRA;1997
+106;GB;11;Patrik Carlgren;se SWE;1992
+107;AT;4;Josué Casimir;fr FRA;2001
+108;MT;18;Cristian Cásseres Jr.;ve VEN;2000
+109;DF;11;Jean-Charles Castelletto;cm CMR;1995
+110;MT;1;Enzo Caumont;fr FRA;2004
+111;DF;11;Fabien Centonze;fr FRA;1996
+112;DF;3;Brendan Chardonnet;fr FRA;1994
+113;DF;5;Jhoanner Chávez;ec ECU;2002
+114;DF;10;Théo Chennahi;fr FRA;2005
+115;AT;1;Sidiki Cherif;fr FRA;2006
+116;AT;7;Rayan Cherki;fr FRA;2003
+117;GB;6;Lucas Chevalier;fr FRA;2001
+118;MT;11;Pedro Chirivella;es ESP;1997
+119;MT;10;Joris Chotard;fr FRA;2001
+120;MT;15;Djaoui Cissé;fr FRA;2004
+121;MT;2;Yoann Cissé;fr FRA;2004
+122;DF;12;Jonathan Clauss;fr FRA;1992
+123;DF;11;Marcus Coco;fr FRA;1996
+124;MT;4;Alois Confais;fr FRA;1996
+125;MT;11;Francis Coquelin;fr FRA;1991
+126;DF;8;Derek Cornelius;ca CAN;1997
+127;DF;16;Pierre Cornud;fr FRA;1996
+128;MT;5;David Costa;pt POR;2001
+129;DF;18;Logan Costa;cv CPV;2001
+130;GB;3;Grégoire Coudert;fr FRA;1999
+131;AT;2;Lasso Coulibaly;gh GHA;2002
+132;MT;9;Mamadou Coulibaly;fr FRA;2004
+133;DF;3;Soumaïla Coulibaly;fr FRA;2003
+134;AT;10;Tanguy Coulibaly;fr FRA;2001
+135;MT;1;Marius Courcoul;fr FRA;2007
+136;DF;11;Nicolas Cozza;fr FRA;1999
+137;DF;18;Charlie Cresswell;eng ENG;2002
+138;MT;2;Kévin Danois;fr FRA;2004
+139;DF;5;Kevin Danso;at AUT;1998
+140;DF;12;Dante;br BRA;1983
+141;MT;17;Pape Daouda Diongue;sn SEN;2006
+142;AT;14;Mohamed Daramy;dk DEN;2002
+143;AT;6;Jonathan David;ca CAN;2000
+144;AT;16;Zuriko Davitashvili;ge GEO;2001
+145;GB;2;Théo De Percin;mq MTQ;2001
+146;DF;14;Thibault De Smet;be BEL;1998
+147;DF;8;Amar Dedić;ba BIH;2002
+148;AT;3;Romain Del Castillo;fr FRA;1996
+149;DF;17;Thomas Delaine;fr FRA;1992
+150;AT;10;Andy Delort;dz ALG;1991
+151;AT;13;Ousmane Dembélé;fr FRA;1997
+152;GB;7;Rémy Descamps;fr FRA;1996
+153;GB;4;Arthur Desmas;fr FRA;1994
+154;AT;14;Mamadou Diakhon;fr FRA;2005
+155;DF;6;Bafodé Diakité;fr FRA;2001
+156;AT;14;Oumar Diakité;ci CIV;2003
+157;MT;17;Habib Diarra;sn SEN;2004
+158;DF;9;Krépin Diatta;sn SEN;1999
+159;AT;4;Kandet Diawara;gn GUI;2000
+160;MT;4;Mahamadou Diawara;fr FRA;2005
+161;MT;4;Mahamadou Diawara;fr FRA;2005
+162;AT;1;Bamba Dieng;sn SEN;2000
+163;DF;5;Kembo Diliwidi;fr FRA;2006
+164;DF;2;Sinaly Diomande;ci CIV;2001
+165;AT;1;Lois Diony;fr FRA;1992
+166;AT;3;Sérigné Diop;sn SEN;2005
+167;MT;12;Sofiane Diop;fr FRA;2000
+168;MT;5;Andy Diouf;fr FRA;2003
+169;GB;14;Yehvann Diouf;fr FRA;1999
+170;MT;2;Assane Dioussé;sn SEN;1997
+171;GB;18;Álex Domínguez;es ESP;1998
+172;GB;13;Gianluigi Donnarumma;it ITA;1999
+173;DF;11;Sékou Doucoure;fr FRA;2005
+174;AT;13;Désiré Doué;fr FRA;2005
+175;DF;17;Guela Doué;ci CIV;2002
+176;MT;11;Douglas;br BRA;1997
+177;DF;17;Ismaël Doukouré;fr FRA;2003
+178;MT;3;Kamory Doumbia;ml MLI;2003
+179;DF;12;Amidou Doumbouya;fr FRA;2007
+180;DF;11;Jean-Kevin Duverne;ht HAI;1997
+181;DF;10;Stefan Džodić;rs SRB;2005
+182;DF;18;Aron Dønnum;no NOR;1998
+183;MT;18;Noah Edjouma;fr FRA;2005
+184;DF;1;Jacques Ekomie;ga GAB;2003
+185;MT;16;Pierre Ekwah Elimby;fr FRA;2002
+186;AT;11;Meschak Elia;cd COD;1997
+187;AT;9;Breel Embolo;ch SUI;1997
+188;AT;17;Emanuel Emegha;nl NED;2003
+189;MT;3;Romain Faivre;fr FRA;1998
+190;MT;10;Khalil Fayad;fr FRA;2004
+191;DF;8;Luiz Felipe;it ITA;1997
+192;AT;1;Zinedine Ferhat;dz ALG;1993
+193;MT;3;Edimilson Fernandes;ch SUI;1996
+194;AT;6;Matias Fernandez-Pardo;be BEL;2005
+195;MT;10;Jordan Ferri;fr FRA;1992
+196;MT;17;Karol Fila;pl POL;1998
+197;AT;7;Malick Fofana;be BEL;2005
+198;AT;5;Rayan Fofana;fr FRA;2006
+199;MT;15;Seko Fofana;ci CIV;1995
+200;GB;1;Yahia Fofana;ci CIV;2000
+201;MT;16;Lamine Fomba;fr FRA;1998
+202;DF;5;Przemysław Frankowski;pl POL;1995
+203;MT;5;Angelo Fulgini;fr FRA;1996
+204;AT;15;Kyogo Furuhashi;jp JPN;1995
+205;GB;15;Gauthier Gallon;fr FRA;1993
+206;AT;11;Ignatius Ganago;cm CMR;1999
+207;DF;8;Ulisses Garcia;ch SUI;1996
+208;MT;11;Jean-Philippe Gbamin;ci CIV;1995
+209;DF;14;Mory Gbane;ci CIV;2000
+210;MT;18;Yann Gboho;fr FRA;2001
+211;MT;18;Denis Genreau;au AUS;1999
+212;MT;9;Aleksandr Golovin;ru RUS;1996
+213;MT;6;André Gomes;pt POR;1993
+214;MT;6;Angel Gomes;eng ENG;2000
+215;MT;15;Carlos Gómez;co COL;2002
+216;GB;4;Mathieu Gorgelin;fr FRA;1990
+217;AT;8;Amine Gouiri;dz ALG;2000
+218;MT;8;Amine Gouiri;dz ALG;2000
+219;DF;5;Jonathan Gradit;fr FRA;1992
+220;MT;4;Samuel Grandsir;fr FRA;1996
+221;AT;8;Mason Greenwood;eng ENG;2001
+222;MT;15;Albert Grønbaek;dk DEN;2001
+223;DF;6;Gabriel Gudmundsson;se SWE;1999
+224;AT;10;Axel Gueguin;fr FRA;2005
+225;AT;12;Evann Guessand;ci CIV;2001
+226;AT;11;Bahereba Guirassy;fr FRA;2006
+227;DF;3;Massadio Haïdara;ml MLI;1992
+228;DF;13;Achraf Hakimi;ma MAR;1998
+229;DF;1;Florent Hanin;dz ALG;1990
+230;MT;8;Amine Harit;ma MAR;1997
+231;DF;15;Hans Hateboer;nl NED;1994
+232;GB;18;Kjetil Haug;no NOR;1998
+233;DF;8;Luis Henrique;br BRA;2001
+234;DF;13;Lucas Hernández;fr FRA;1996
+235;DF;2;Ki-Jana Hoever;nl NED;2002
+236;DF;1;Cédric Hountondji;bj BEN;1994
+237;AT;4;Ilyes Housni;fr FRA;2005
+238;MT;8;Pierre Højbjerg;dk DEN;1995
+239;AT;14;Hafiz Ibrahim;ng NGA;2005
+240;AT;9;George Ilenikhena;fr FRA;2006
+241;MT;12;Rareş Ilie;ro ROU;2003
+242;DF;6;Ismaily;br BRA;1990
+243;MT;10;Yanis Issoufou;fr FRA;2006
+244;AT;14;Junya Ito;jp JPN;1993
+245;DF;15;Jérémy Jacquet;fr FRA;2005
+246;DF;9;Ismail Jakobs;sn SEN;1999
+247;MT;15;Jordan James;wls WAL;2004
+248;DF;14;Malcolm Jeng;se SWE;2005
+249;MT;14;John Joe;ie IRL;2003
+250;GB;17;Karl-Johan Johnsson;se SWE;1990
+251;DF;2;Paul Joly;fr FRA;2000
+252;AT;15;Jota;pt POR;1999
+253;MT;4;Antoine Joujou;fr FRA;2003
+254;DF;2;Jubal;br BRA;1993
+255;MT;2;Hamed Junior Traorè;ci CIV;2000
+256;MT;14;Yaya Kader Fofana;ml MLI;2004
+257;MT;11;Tino Kadewere;zw ZIM;1996
+258;AT;15;Arnaud Kalimuendo;fr FRA;2002
+259;AT;1;Justin-Noël Kalumba;fr FRA;2004
+260;DF;18;Waren Kamanzi;no NOR;2000
+261;MT;15;Glen Kamara;fi FIN;1995
+262;DF;13;Noham Kamara;fr FRA;2007
+263;MT;17;Nordine Kandil;fr FRA;2001
+264;AT;13;Lee Kang-in;kr KOR;2001
+265;MT;4;Yassine Kechta;ma MAR;2002
+266;DF;9;Thilo Kehrer;de GER;1996
+267;MT;14;Reda Khadra;de GER;2001
+268;AT;10;Wahbi Khazri;tn TUN;1991
+269;DF;5;Abdukodir Khusanov;uz UZB;2004
+270;DF;13;Presnel Kimpembe;fr FRA;1995
+271;AT;18;Joshua King;no NOR;1992
+272;DF;14;Cédric Kipré;ci CIV;1996
+273;GB;5;Hervé Koffi;bf BFA;1996
+274;GB;9;Philipp Köhn;ch SUI;1998
+275;AT;4;Koka;eg EGY;1993
+276;AT;13;Randal Kolo Muani;fr FRA;1998
+277;DF;8;Geoffrey Kondogbia;cf CTA;1993
+278;DF;14;Abdoul Koné;fr FRA;2005
+279;MT;14;Amadou Koné;ml MLI;2005
+280;MT;8;Ismaël Koné;ca CAN;2002
+281;MT;8;Ismaël Koné;ca CAN;2002
+282;DF;8;Emmanuel Koum Mbondo;fr FRA;2006
+283;DF;10;Boubakar Kouyaté;ml MLI;1997
+284;AT;5;Goduine Koyalipou;cf CTA;2000
+285;DF;7;Sael Kumbedi;fr FRA;2005
+286;MT;4;Daler Kuzyaev;ru RUS;1993
+287;AT;13;Khvicha Kvaratskhelia;ge GEO;2001
+288;AT;5;Rémy Labeau Lascary;gp GLP;2003
+289;AT;12;Gaëtan Laborde;fr FRA;1994
+290;AT;7;Alexandre Lacazette;fr FRA;1991
+291;MT;6;Younes Lachaab;fr FRA;2005
+292;GB;11;Alban Lafont;fr FRA;1999
+293;DF;3;Kenny Lala;mg MAD;1991
+294;AT;6;Mohamed Lamine Bayo;gn GUI;1998
+295;GB;16;Gautier Larsonneur;fr FRA;1997
+296;DF;3;Julien Le Cardinal;fr FRA;1997
+297;AT;3;Jérémy Le Douaron;fr FRA;1998
+298;GB;10;Benjamin Lecomte;fr FRA;1991
+299;MT;3;Pierre Lees-Melou;fr FRA;1993
+300;DF;1;Jordan Lefort;fr FRA;1993
+301;MT;17;Félix Lemaréchal;fr FRA;2003
+302;GB;2;Donovan Léon;gf GUF;1992
+303;AT;1;Esteban Lepaul;fr FRA;2000
+304;MT;11;Johann Lepenant;fr FRA;2002
+305;MT;11;Louis Leroux;fr FRA;2006
+306;DF;8;Pol Lirola;es ESP;1997
+307;DF;4;Gautier Lloris;fr FRA;1995
+308;DF;3;Bradley Locko;fr FRA;2002
+309;AT;4;Elysée Logbo;fr FRA;2004
+310;GB;11;Anthony Lopes;pt POR;1990
+311;MT;12;Jordan Lotomba;ch SUI;1998
+312;DF;12;Tom Louchet;fr FRA;2003
+313;AT;17;Milos Lukovic;rs SRB;2005
+314;AT;10;Othmane Maamma;ma MAR;2005
+315;DF;5;Deiver Machado;co COL;1993
+316;AT;1;Lanroy Machine;fr FRA;2005
+317;DF;16;Yvann Macon;fr FRA;1998
+318;DF;2;Eros Maddy;nl NED;2001
+319;MT;9;Soungoutou Magassa;fr FRA;2003
+320;MT;3;Hugo Magnetti;fr FRA;1998
+321;AT;18;Frank Magri;cm CMR;1999
+322;DF;7;Ainsley Maitland-Niles;eng ENG;1997
+323;GB;9;Radosław Majecki;pl POL;1999
+324;AT;3;Hamidou Makalou;ml MLI;2006
+325;DF;10;Nikola Maksimović;rs SRB;1991
+326;AT;6;Aaron Malouda;fr FRA;2005
+327;MT;3;Hianga Mananga Mbock;fr FRA;1999
+328;GB;15;Steve Mandanda;fr FRA;1985
+329;DF;6;Aïssa Mandi;dz ALG;1991
+330;MT;7;Orel Mangala;be BEL;1998
+331;AT;17;Sekou Mara;fr FRA;2002
+332;DF;13;Marquinhos;br BRA;1994
+333;MT;14;Ange Martial Tia;ml MLI;2006
+334;MT;3;Jonas Martin;fr FRA;1990
+335;MT;2;Han-Noah Massengo;fr FRA;2001
+336;DF;7;Clinton Mata;ao ANG;1992
+337;MT;9;Eliot Matazo;be BEL;2002
+338;MT;7;Nemanja Matić;rs SRB;1988
+339;MT;2;Rudy Matondo;fr FRA;2008
+340;MT;15;Azor Matusiwa;nl NED;1998
+341;AT;8;Neal Maupay;fr FRA;1996
+342;DF;9;Christian Mawissa;fr FRA;2005
+343;MT;13;Senny Mayulu;fr FRA;2006
+344;MT;6;Ethan Mbappé;fr FRA;2006
+345;AT;13;Ibrahim Mbaye;fr FRA;2008
+346;DF;18;Mark McKenzie;us USA;1999
+347;DF;5;Facundo Medina;ar ARG;1999
+348;AT;15;Henrik Meister;dk DEN;2003
+349;DF;10;Bamo Meïté;ci CIV;2001
+350;DF;10;Bamo Meïté;ci CIV;2001
+351;AT;15;Mohamed Meité;fr FRA;2007
+352;AT;1;Farid El Melali;dz ALG;1997
+353;DF;13;Nuno Mendes;pt POR;2002
+354;DF;12;Antoine Mendy;sn SEN;2004
+355;MT;5;Nampalys Mendy;sn SEN;1992
+356;DF;2;Gideon Mensah;gh GHA;1998
+357;DF;8;Quentin Merlin;fr FRA;2002
+358;DF;18;Rafik Messali;fr FRA;2003
+359;DF;6;Thomas Meunier;be BEL;1991
+360;AT;9;Lucas Michal;fr FRA;2005
+361;AT;7;Georges Mikautadze;ge GEO;2000
+362;AT;16;Igor Miladinović;rs SRB;2003
+363;MT;9;Takumi Minamino;jp JPN;1995
+364;DF;10;Lucas Mincarelli;fr FRA;2004
+365;AT;12;Terem Moffi;ng NGA;1999
+366;AT;11;Mostafa Mohamed;eg EGY;1997
+367;MT;11;Florent Mollet;fr FRA;1991
+368;DF;17;Diego Moreira;pt POR;2004
+369;MT;14;Gabriel Moscardo;br BRA;2005
+370;DF;10;Yael Mouanga;fr FRA;2005
+371;MT;16;Aimen Moueffek;fr FRA;2001
+372;AT;12;Youssoufa Moukoko;de GER;2004
+373;MT;16;Louis Mouton;fr FRA;2002
+374;MT;6;Ngal'Ayel Mukau;cd COD;2004
+375;MT;14;Marshall Munetsi;zw ZIM;1996
+376;MT;9;Almoatasem Al Musrati;ly LBY;1996
+377;MT;4;Junior Mwanga;fr FRA;2003
+378;MT;4;Junior Mwanga;fr FRA;2003
+379;DF;2;Loïc N'Gatta;fr FRA;2003
+380;AT;16;Djylian N'Guessan;fr FRA;2008
+381;DF;16;Mickael Nade;fr FRA;1999
+382;MT;8;Bilal Nadir;ma MAR;2003
+383;DF;15;Mahamadou Nagida;cm CMR;2005
+384;AT;14;Keito Nakamura;jp JPN;2000
+385;MT;17;Sebastian Nanasi;se SWE;2002
+386;DF;12;Yael Nandjou;fr FRA;2005
+387;DF;12;Youssouf Ndayishimiye;bi BDI;1998
+388;AT;10;Junior Ndiaye;fr FRA;2005
+389;MT;4;Rassoul Ndiaye;sn SEN;2001
+390;DF;10;Wilfried Ndollo;cm CMR;2005
+391;MT;12;Tanguy Ndombele;fr FRA;1996
+392;DF;4;Loïc Nego;hu HUN;1991
+393;MT;13;João Neves;pt POR;2004
+394;DF;15;Mikayil Ngor Faye;sn SEN;2004
+395;AT;4;Steve Ngoura;fr FRA;2005
+396;AT;12;Bernard Nguene;cm CMR;2006
+397;DF;7;Moussa Niakhate;sn SEN;1996
+398;DF;3;Abdoulaye Niakhate Ndiaye;sn SEN;2002
+399;AT;1;Ibrahima Niane;sn SEN;1999
+400;DF;18;Rasmus Nicolaisen;dk DEN;1997
+401;AT;10;Arnaud Nordin;fr FRA;1998
+402;MT;11;Plamedi Nsingi;cd COD;2000
+403;AT;7;Ernest Nuamah;gh GHA;2003
+404;MT;10;Rabby Nzingoula;cg CGO;2005
+405;AT;5;M'Bala Nzola;ao ANG;1996
+406;DF;16;Marwann Nzuzi;fr FRA;2004
+407;MT;5;Hamzat Ojediran;ng NGA;2003
+408;DF;14;Joseph Okumu;ke KEN;1997
+409;MT;15;Kazeem Olaigbe;be BEL;2003
+410;AT;16;Ben Old;nz NZL;2002
+411;DF;7;Warmed Omari;km COM;2000
+412;DF;10;Becir Omeragic;ch SUI;2002
+413;DF;17;Andrew Omobamidele;ie IRL;2002
+414;MT;2;Ado Onaiwu;jp JPN;1995
+415;DF;4;Christopher Operi;ci CIV;1997
+416;DF;2;Fredrik Oppegard;no NOR;2002
+417;AT;12;Victor Orakpo;ng NGA;2006
+418;MT;14;Ike Orazi;ie IRL;2007
+419;AT;7;Gift Orban;ng NGA;2002
+420;DF;2;Gabriel Osho;ng NGA;1998
+421;AT;16;Jibril Othman;tn TUN;2004
+422;DF;17;Guimissongui Ouattara;fr FRA;2005
+423;DF;9;Kassoum Ouattara;fr FRA;2004
+424;MT;1;Zinédine Ould Khaled;fr FRA;2000
+425;DF;16;Beres Owusu;fr FRA;2003
+426;MT;2;Elisha Owusu;gh GHA;1997
+427;DF;13;Willian Pacho;ec ECU;2001
+428;DF;11;Nicolas Pallois;fr FRA;1987
+429;AT;10;Nicolas Pays;fr FRA;2003
+430;DF;16;Kévin Pedro;fr FRA;2006
+431;AT;14;Jordan Pefok;us USA;1996
+432;DF;2;Théo Pellenard;fr FRA;1994
+433;DF;4;Timothee Pembele;fr FRA;2002
+434;AT;8;Faris Pemi Moumbagna;cm CMR;2000
+435;MT;17;Óscar Perea;co COL;2005
+436;AT;3;Mathias Pereira Lage;pt POR;1996
+437;GB;7;Lucas Perri;br BRA;1997
+438;MT;2;Gaëtan Perrin;fr FRA;1996
+439;MT;1;Prosper Peter;ng NGA;2007
+440;DF;16;Léo Pétrot;fr FRA;1997
+441;GB;17;Đorđe Petrović;rs SRB;1999
+442;DF;5;Tom Pouilly;fr FRA;2003
+443;MT;8;Adrien Rabiot;fr FRA;1995
+444;AT;13;Gonçalo Ramos;pt POR;2001
+445;DF;1;Lilian Raolisoa;fr FRA;2000
+446;MT;2;Rayan Raveloson;mg MAD;1997
+447;GB;18;Guillaume Restes;fr FRA;2005
+448;DF;6;Alexsandro Ribeiro;br BRA;1999
+449;MT;7;Alejandro Rodriguez;pt POR;2008
+450;MT;8;Valentin Rongier;fr FRA;1994
+451;MT;12;Pablo Rosario;nl NED;1997
+452;DF;15;Anthony Rouault;fr FRA;2001
+453;AT;8;Jon Rowe;eng ENG;2003
+454;MT;13;Fabián Ruiz Peña;es ESP;1996
+455;GB;8;Gerónimo Rulli;ar ARG;1992
+456;GB;5;Mathew Ryan;au AUS;1992
+457;AT;4;Emmanuel Sabbi;us USA;1997
+458;DF;10;Falaye Sacko;ml MLI;1995
+459;GB;13;Matvei Safonov;ru RUS;1999
+460;DF;10;Modibo Sagnan;ml MLI;1999
+461;AT;6;Osame Sahraoui;ma MAR;2001
+462;AT;5;Wesley Saïd;fr FRA;1995
+463;DF;10;Théo Sainte-Luce;fr FRA;1998
+464;AT;3;Ibrahim Salah;ma MAR;2001
+465;AT;14;Amine Salama;fr FRA;2000
+466;DF;9;Mohammed Salisu;gh GHA;1999
+467;DF;4;Yoann Salmier;gf GUF;1992
+468;AT;7;Mama Samba Baldé;gw GNB;1995
+469;AT;7;Mama Samba Baldé;gw GNB;1995
+470;GB;15;Brice Samba;fr FRA;1994
+471;GB;15;Brice Samba;fr FRA;1994
+472;DF;4;Arouna Sangante;sn SEN;2002
+473;DF;14;Nhoa Sangui;fr FRA;2006
+474;MT;12;Morgan Sanson;fr FRA;1994
+475;MT;12;Baptiste Santamaria;fr FRA;1995
+476;MT;12;Baptiste Santamaria;fr FRA;1995
+477;MT;17;Andrey Santos;br BRA;2004
+478;DF;6;Tiago Santos;pt POR;2002
+479;DF;5;Malang Sarr;fr FRA;1999
+480;DF;17;Mamadou Sarr;fr FRA;2005
+481;AT;5;Martin Satriano;uy URU;2001
+482;MT;10;Téji Savanier;fr FRA;1991
+483;MT;18;Niklas Schmidt;de GER;1998
+484;AT;17;Jérémy Sebas;mq MTQ;2003
+485;DF;15;Alidu Seidu;gh GHA;2000
+486;DF;14;Hiroki Sekine;jp JPN;2002
+487;DF;17;Marvin Senaya;tg TOG;2001
+488;DF;18;Djibril Sidibé;fr FRA;1992
+489;MT;18;Vincent Sierro;ch SUI;1995
+490;DF;9;Caio Henrique Oliveira Silva;br BRA;1997
+491;AT;3;Abdallah Sima;sn SEN;2001
+492;AT;11;Moses Simon;ng NGA;1995
+493;AT;2;Lassine Sinayoko;ml MLI;1999
+494;DF;9;Wilfried Singo;ci CIV;2000
+495;AT;15;Ayanda Sishuba;be BEL;2005
+496;AT;16;Ibrahim Sissoko;ml MLI;1995
+497;AT;14;Niama Sissoko;ml MLI;2005
+498;DF;15;Leo Skiri Østigård;no NOR;1999
+499;DF;13;Milan Škriniar;sk SVK;1995
+500;AT;18;Naatan Skyttä;fi FIN;2002
+501;DF;17;Eduard Sobol;ua UKR;1995
+502;AT;5;Florian Sotoca;fr FRA;1990
+503;AT;4;Issa Soumaré;sn SEN;2000
+504;DF;17;Saidou Sow;gn GUI;2002
+505;DF;17;Saidou Sow;gn GUI;2002
+506;AT;16;Lucas Stassin;be BEL;2004
+507;AT;8;Enzo Sternal;fr FRA;2007
+508;DF;18;Gabriel Suazo;cl CHI;1997
+509;DF;17;Abakar Sylla;ci CIV;2002
+510;DF;10;Issiaga Sylla;gn GUI;1994
+511;AT;10;Musa Al-Taamari;jo JOR;1997
+512;AT;10;Musa Al-Taamari;jo JOR;1997
+513;DF;7;Nicolás Tagliafico;ar ARG;1992
+514;DF;13;Axel Tapé;fr FRA;2007
+515;MT;16;Florian Tardieu;fr FRA;1992
+516;MT;4;Oussama Targhalline;ma MAR;2002
+517;DF;10;Enzo Tchato;cm CMR;2002
+518;GB;13;Arnau Tenas;es ESP;2001
+519;MT;7;Tanner Tessmann;us USA;2001
+520;MT;14;Teddy Teuma;mt MLT;1993
+521;DF;9;Jordan Teze;nl NED;1999
+522;AT;11;Sorba Thomas;wls WAL;1999
+523;MT;5;Adrien Thomasson;fr FRA;1993
+524;MT;7;Corentin Tolisso;fr FRA;1994
+525;MT;4;Abdoulaye Touré;gn GUI;1994
+526;MT;10;Birama Touré;ml MLI;1992
+527;DF;6;Ousmane Toure;fr FRA;2005
+528;DF;15;Adrien Truffert;fr FRA;2001
+529;DF;9;Vanderson;br BRA;2001
+530;AT;8;Robinio Vaz;fr FRA;2007
+531;MT;7;Jordan Veretout;fr FRA;1993
+532;MT;2;Ben Viadere;fr FRA;2005
+533;MT;13;Vitinha;pt POR;2000
+534;AT;16;Ibrahima Wadji;sn SEN;1995
+535;AT;8;Elye Wahi;fr FRA;2003
+536;DF;17;Caleb Wiley;us USA;2004
+537;DF;15;Christopher Wooh;cm CMR;2001
+538;DF;4;Etienne Youte Kinkoue;fr FRA;2002
+539;DF;14;Eloge Zabi;ci CIV;2006
+540;DF;13;Yoram Zague;fr FRA;2006
+541;AT;7;Wilfried Zaha;ci CIV;1992
+542;MT;13;Warren Zaïre-Emery;fr FRA;2006
+543;MT;18;Miha Zajc;si SVN;1994
+544;MT;9;Denis Zakaria;ch SUI;1996
+545;AT;5;Anass Zaroury;ma MAR;2000
+546;DF;11;Nathan Zeze;fr FRA;2005
+547;AT;6;Edon Zhegrova;xk KVX;1999
+548;DF;3;Luc Zogbé;ci CIV;2005
+549;MT;2;Aristide Zossou;ci CIV;2005
+550;DF;4;Yanis Zouaoui;dz ALG;1994
+551;DF;2;Edhy Zuliani;it ITA;2004
