@@ -172,46 +172,37 @@ ORDER BY prgp DESC;
 
 -- 11. Shortlist recrutement : 10 attaquants finisseurs, salaire <= 3M€
 -- Ratio = PrgP / buts
--- Classement : meilleurs buteurs d'abord, puis ratio le plus faible
+-- Classement : buts décroissants, puis ratio croissant, puis PrgP croissant
 
 WITH candidats AS (
-    SELECT
-        j.nom_joueur,
-        e.nom_equipe,
-        ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
-        p.buts,
-        pr.progression_passe AS prgp,
-        FLOOR(pr.progression_passe::numeric / NULLIF(p.buts, 0)) AS ratio
-    FROM joueur j
-             JOIN equipe e
-                  ON j.id_equipe = e.id_equipe
-             JOIN performance p
-                  ON j.id_joueur = p.id_joueur
-             JOIN progression pr
-                  ON j.id_joueur = pr.id_joueur
-             JOIN salaire_source s
-                  ON j.id_joueur = s.id_joueur
-    WHERE j.code_position LIKE '%AT%'
-      AND s.salaire_annuel <= 3000000
-      AND p.buts >= 5
-)
+SELECT j.nom_joueur, e.nom_equipe,
+       ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
+       p.buts,
+       pr.progression_passe AS prgp,
+       FLOOR(pr.progression_passe::numeric / NULLIF(p.buts, 0))::int AS ratio
+       FROM joueur j
+                JOIN equipe e
+                     ON j.id_equipe = e.id_equipe
+                JOIN performance p
+                     ON j.id_joueur = p.id_joueur
+                JOIN progression pr
+                     ON j.id_joueur = pr.id_joueur
+                JOIN salaire_source s
+                     ON j.id_joueur = s.id_joueur
+       WHERE j.code_position LIKE '%AT%'
+         AND s.salaire_annuel <= 3000000
+         AND p.buts >= 5),
+classement AS (SELECT ROW_NUMBER() OVER (
+ORDER BY buts DESC, ratio ASC, prgp ASC
+) AS rang, nom_joueur, nom_equipe, salaire_millions_euros,
+     buts, prgp, ratio
+FROM candidats)
+SELECT rang, nom_joueur, nom_equipe, salaire_millions_euros,
+       buts, prgp, ratio
+FROM classement
+WHERE rang <= 10
+ORDER BY rang;
 
-SELECT
-            ROW_NUMBER() OVER (
-        ORDER BY buts DESC, ratio ASC, prgp ASC
-        ) AS rang,
-            nom_joueur,
-            nom_equipe,
-            salaire_millions_euros,
-            buts,
-            prgp,
-            ratio
-FROM candidats
-ORDER BY
-    buts DESC,
-    ratio ASC,
-    prgp ASC
-LIMIT 10;
 
 -- 12. Analyse complémentaire : joueurs les plus efficaces en buts par 90 minutes
 SELECT

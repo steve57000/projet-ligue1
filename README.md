@@ -50,13 +50,13 @@ projet-ligue1/
 
 ## 🔌 Connexion à PostgreSQL
 
-| Paramètre | Valeur |
-|---|---|
-| Host | `localhost` |
-| Port | `5432` |
-| Database | `ligue1_2025` |
-| User | `postgres` |
-| Password | `postgres` |
+| Paramètre        | Valeur            |
+|------------------|-------------------|
+| Host             | `localhost`       |
+| Port             | `5432`            |
+| Database         | `ligue1_2025`     |
+| User             | `postgres`        |
+| Password         | `postgres`        |
 | Container Docker | `ligue1-postgres` |
 
 ---

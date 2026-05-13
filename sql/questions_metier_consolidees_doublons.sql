@@ -89,19 +89,9 @@ ORDER BY nombre_joueurs DESC;
 
 -- 4. Nombre moyen de buts marqués par un attaquant - version consolidée
 SELECT
-    v.nom_joueur,
-    STRING_AGG(DISTINCT e.nom_equipe, ', ') AS equipe,
-    SUM(v.buts) AS total_buts,
-    SUM(v.matchs_joues) AS total_matchs_joues,
-    ROUND(
-            SUM(v.buts)::numeric / NULLIF(SUM(v.matchs_joues), 0),
-            2
-    ) AS moyenne_buts_par_match
+    ROUND(AVG(v.buts), 2) AS moyenne_buts_attaquants
 FROM v_stats_joueurs_consolidees v
-         JOIN equipe e ON v.id_equipe = e.id_equipe
-WHERE v.code_position LIKE '%AT%'
-GROUP BY v.nom_joueur
-ORDER BY moyenne_buts_par_match DESC, total_buts DESC, v.nom_joueur;
+WHERE v.code_position LIKE '%AT%';
 
 
 -- 6. Top 10 des buteurs de Ligue 1
@@ -170,37 +160,53 @@ ORDER BY prgp DESC;
 
 
 -- 11. Shortlist recrutement : 10 attaquants finisseurs, salaire inférieur ou égal à 3M€
+-- Ratio = PrgP / buts
+-- Classement : meilleurs buteurs d'abord, puis ratio le plus faible, puis PrgP le plus faible
+
 WITH candidats AS (
     SELECT
         v.nom_joueur,
         STRING_AGG(DISTINCT e.nom_equipe, ', ') AS equipes,
         ROUND(MIN(s.salaire_annuel)::numeric / 1000000, 2) AS salaire_millions_euros,
         SUM(v.buts) AS buts,
-        ROUND(SUM(v.buts)::numeric / NULLIF(SUM(v.matchs_90), 0), 2) AS buts_par_90,
-        ROUND(SUM(v.buts)::numeric - SUM(v.xg), 2) AS difference_buts_xg,
-        ROUND(SUM(v.progression_passe)::numeric / NULLIF(SUM(v.matchs_90), 0), 2) AS prgp_par_90
+        SUM(v.progression_passe) AS prgp,
+        FLOOR(
+                SUM(v.progression_passe)::numeric / NULLIF(SUM(v.buts), 0)
+        )::int AS ratio
     FROM v_stats_joueurs_consolidees v
-             JOIN equipe e ON v.id_equipe = e.id_equipe
-             JOIN salaire_source s ON s.nom_joueur = v.nom_joueur
+             JOIN equipe e
+                  ON v.id_equipe = e.id_equipe
+             JOIN salaire_source s
+                  ON s.id_joueur = v.id_joueur_reference
     WHERE v.code_position LIKE '%AT%'
       AND s.salaire_annuel <= 3000000
-      AND v.matchs_90 > 0
     GROUP BY v.nom_joueur
     HAVING SUM(v.buts) >= 5
-)
+),
+
+     classement AS (
+         SELECT
+                     ROW_NUMBER() OVER (
+                 ORDER BY buts DESC, ratio ASC, prgp ASC
+                 ) AS rang,
+                     nom_joueur,
+                     equipes,
+                     salaire_millions_euros,
+                     buts,
+                     prgp,
+                     ratio
+         FROM candidats
+     )
 
 SELECT
-            ROW_NUMBER() OVER (
-        ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
-        ) AS rang,
-            nom_joueur,
-            equipes,
-            salaire_millions_euros,
-            buts,
-            buts_par_90,
-            difference_buts_xg,
-            prgp_par_90
-FROM candidats
-ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
-LIMIT 10;
+    rang,
+    nom_joueur,
+    equipes,
+    salaire_millions_euros,
+    buts,
+    prgp,
+    ratio
+FROM classement
+WHERE rang <= 10
+ORDER BY rang;
 

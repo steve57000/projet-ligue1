@@ -398,13 +398,13 @@ LIMIT 10;
 
 # Paramètres de connexion DataGrip / IntelliJ
 
-| Paramètre | Valeur |
-|---|---|
-| Host | `localhost` |
-| Port | `5432` |
-| Database | `ligue1_2025` |
-| User | `postgres` |
-| Password | `postgres` |
+| Paramètre | Valeur        |
+|-----------|---------------|
+| Host      | `localhost`   |
+| Port      | `5432`        |
+| Database  | `ligue1_2025` |
+| User      | `postgres`    |
+| Password  | `postgres`    |
 
 ---
 

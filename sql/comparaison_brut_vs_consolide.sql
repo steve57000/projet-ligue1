@@ -136,59 +136,39 @@ ORDER BY ABS(COALESCE(c.nombre_consolide, 0) - COALESCE(b.nombre_brut, 0)) DESC;
 
 
 
--- 4. Comparaison : moyenne de buts par match des attaquants
+-- 4. Comparaison : moyenne globale de buts marqués par les attaquants
 
 WITH brut AS (
     SELECT
-        j.nom_joueur,
-        SUM(p.buts) AS buts_brut,
-        SUM(t.matchs_joues) AS matchs_joues_brut,
-        ROUND(SUM(p.buts)::numeric / NULLIF(SUM(t.matchs_joues), 0), 2) AS moyenne_buts_par_match_brut,
-        COUNT(*) AS nb_lignes_brutes
+        ROUND(AVG(p.buts), 2) AS moyenne_buts_attaquants_brut,
+        COUNT(*) AS nb_attaquants_brut
     FROM joueur j
              JOIN performance p ON j.id_joueur = p.id_joueur
-             JOIN temps_de_jeu t ON j.id_joueur = t.id_joueur
     WHERE j.code_position LIKE '%AT%'
-    GROUP BY j.nom_joueur
 ),
 
      consolide AS (
          SELECT
-             v.nom_joueur,
-             SUM(v.buts) AS buts_consolides,
-             SUM(v.matchs_joues) AS matchs_joues_consolides,
-             ROUND(SUM(v.buts)::numeric / NULLIF(SUM(v.matchs_joues), 0), 2) AS moyenne_buts_par_match_consolidee,
-             COUNT(*) AS nb_lignes_consolidees
+             ROUND(AVG(v.buts), 2) AS moyenne_buts_attaquants_consolidee,
+             COUNT(*) AS nb_attaquants_consolides
          FROM v_stats_joueurs_consolidees v
          WHERE v.code_position LIKE '%AT%'
-         GROUP BY v.nom_joueur
      )
 
 SELECT
-    COALESCE(b.nom_joueur, c.nom_joueur) AS nom_joueur,
-    COALESCE(b.buts_brut, 0) AS buts_brut,
-    COALESCE(c.buts_consolides, 0) AS buts_consolides,
-    COALESCE(b.matchs_joues_brut, 0) AS matchs_joues_brut,
-    COALESCE(c.matchs_joues_consolides, 0) AS matchs_joues_consolides,
-    b.moyenne_buts_par_match_brut,
-    c.moyenne_buts_par_match_consolidee,
-    COALESCE(b.nb_lignes_brutes, 0) AS nb_lignes_brutes,
-    COALESCE(c.nb_lignes_consolidees, 0) AS nb_lignes_consolidees,
+    b.nb_attaquants_brut,
+    c.nb_attaquants_consolides,
+    b.moyenne_buts_attaquants_brut,
+    c.moyenne_buts_attaquants_consolidee,
     ROUND(
-            COALESCE(c.moyenne_buts_par_match_consolidee, 0)
-                - COALESCE(b.moyenne_buts_par_match_brut, 0),
+            COALESCE(c.moyenne_buts_attaquants_consolidee, 0)
+                - COALESCE(b.moyenne_buts_attaquants_brut, 0),
             2
     ) AS ecart_moyenne
 FROM brut b
-         FULL JOIN consolide c ON b.nom_joueur = c.nom_joueur
-WHERE COALESCE(b.moyenne_buts_par_match_brut, 0)
-          <> COALESCE(c.moyenne_buts_par_match_consolidee, 0)
-ORDER BY ABS(
-                 COALESCE(c.moyenne_buts_par_match_consolidee, 0)
-                     - COALESCE(b.moyenne_buts_par_match_brut, 0)
-         ) DESC;
-
-
+         CROSS JOIN consolide c
+WHERE COALESCE(b.moyenne_buts_attaquants_brut, 0)
+          <> COALESCE(c.moyenne_buts_attaquants_consolidee, 0);
 
 -- 5. Comparaison : top 10 penalties et taux de réussite
 
@@ -458,38 +438,63 @@ ORDER BY ABS(COALESCE(c.prgp_consolide, 0) - COALESCE(b.prgp_brut, 0)) DESC;
 
 
 -- 11. Comparaison : shortlist recrutement attaquants finisseurs
+-- Ratio = PrgP / buts
+-- Classement : buts décroissants, puis ratio croissant, puis PrgP croissant
 
-WITH brut AS (
+WITH salaires_bruts AS (
     SELECT
-        j.nom_joueur,
-        e.nom_equipe,
-        ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
-        p.buts,
-        ROUND(p.buts::numeric / NULLIF(t.matchs_90, 0), 2) AS buts_par_90,
-        ROUND(p.buts::numeric - a.xg, 2) AS difference_buts_xg,
-        ROUND(pr.progression_passe::numeric / NULLIF(t.matchs_90, 0), 2) AS prgp_par_90
-    FROM joueur j
-             JOIN equipe e ON j.id_equipe = e.id_equipe
-             JOIN performance p ON j.id_joueur = p.id_joueur
-             JOIN attendu a ON j.id_joueur = a.id_joueur
-             JOIN progression pr ON j.id_joueur = pr.id_joueur
-             JOIN temps_de_jeu t ON j.id_joueur = t.id_joueur
-             JOIN salaire_source s ON j.id_joueur = s.id_joueur
-    WHERE j.code_position LIKE '%AT%'
-      AND s.salaire_annuel <= 3000000
-      AND p.buts >= 5
-      AND t.matchs_90 > 0
+        id_joueur,
+        MIN(salaire_annuel) AS salaire_annuel
+    FROM salaire_source
+    WHERE salaire_annuel <= 3000000
+      AND id_joueur IS NOT NULL
+    GROUP BY id_joueur
 ),
 
-     brut_top AS (
+     brut AS (
+         SELECT
+             j.nom_joueur,
+             e.nom_equipe,
+             ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
+             p.buts,
+             pr.progression_passe AS prgp,
+             FLOOR(pr.progression_passe::numeric / NULLIF(p.buts, 0))::int AS ratio
+         FROM joueur j
+                  JOIN equipe e ON j.id_equipe = e.id_equipe
+                  JOIN performance p ON j.id_joueur = p.id_joueur
+                  JOIN progression pr ON j.id_joueur = pr.id_joueur
+                  JOIN salaires_bruts s ON j.id_joueur = s.id_joueur
+         WHERE j.code_position LIKE '%AT%'
+           AND p.buts >= 5
+     ),
+
+     brut_classement AS (
          SELECT
                      ROW_NUMBER() OVER (
-                 ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
+                 ORDER BY buts DESC, ratio ASC, prgp ASC
                  ) AS rang_brut,
-                     *
+                     nom_joueur,
+                     nom_equipe,
+                     salaire_millions_euros,
+                     buts,
+                     prgp,
+                     ratio
          FROM brut
-         ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
-         LIMIT 10
+     ),
+
+     brut_top AS (
+         SELECT *
+         FROM brut_classement
+         WHERE rang_brut <= 10
+     ),
+
+     salaires_consolides AS (
+         SELECT
+             nom_joueur,
+             MIN(salaire_annuel) AS salaire_annuel
+         FROM salaire_source
+         WHERE salaire_annuel <= 3000000
+         GROUP BY nom_joueur
      ),
 
      consolide AS (
@@ -498,50 +503,58 @@ WITH brut AS (
              STRING_AGG(DISTINCT e.nom_equipe, ', ') AS equipes,
              ROUND(MIN(s.salaire_annuel)::numeric / 1000000, 2) AS salaire_millions_euros,
              SUM(v.buts) AS buts,
-             ROUND(SUM(v.buts)::numeric / NULLIF(SUM(v.matchs_90), 0), 2) AS buts_par_90,
-             ROUND(SUM(v.buts)::numeric - SUM(v.xg), 2) AS difference_buts_xg,
-             ROUND(SUM(v.progression_passe)::numeric / NULLIF(SUM(v.matchs_90), 0), 2) AS prgp_par_90
+             SUM(v.progression_passe) AS prgp,
+             FLOOR(
+                     SUM(v.progression_passe)::numeric / NULLIF(SUM(v.buts), 0)
+             )::int AS ratio
          FROM v_stats_joueurs_consolidees v
                   JOIN equipe e ON v.id_equipe = e.id_equipe
-                  JOIN salaire_source s ON s.nom_joueur = v.nom_joueur
+                  JOIN salaires_consolides s ON s.nom_joueur = v.nom_joueur
          WHERE v.code_position LIKE '%AT%'
-           AND s.salaire_annuel <= 3000000
-           AND v.matchs_90 > 0
          GROUP BY v.nom_joueur
          HAVING SUM(v.buts) >= 5
      ),
 
-     consolide_top AS (
+     consolide_classement AS (
          SELECT
                      ROW_NUMBER() OVER (
-                 ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
+                 ORDER BY buts DESC, ratio ASC, prgp ASC
                  ) AS rang_consolide,
-                     *
+                     nom_joueur,
+                     equipes,
+                     salaire_millions_euros,
+                     buts,
+                     prgp,
+                     ratio
          FROM consolide
-         ORDER BY buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
-         LIMIT 10
+     ),
+
+     consolide_top AS (
+         SELECT *
+         FROM consolide_classement
+         WHERE rang_consolide <= 10
      )
 
 SELECT
-    b.nom_joueur         AS nom_joueur,
+    COALESCE(b.nom_joueur, c.nom_joueur) AS nom_joueur,
     b.rang_brut,
     c.rang_consolide,
-    b.nom_equipe         AS equipe_brute,
-    c.equipes            AS equipe_consolidee,
-    b.buts               AS buts_brut,
-    c.buts               AS buts_consolides,
-    b.buts_par_90        AS buts_par_90_brut,
-    c.buts_par_90        AS buts_par_90_consolide,
-    b.difference_buts_xg AS difference_buts_xg_brut,
-    c.difference_buts_xg AS difference_buts_xg_consolidee,
-    b.prgp_par_90 AS prgp_par_90_brut,
-    c.prgp_par_90 AS prgp_par_90_consolide
+    b.nom_equipe AS equipe_brute,
+    c.equipes AS equipe_consolidee,
+    b.salaire_millions_euros AS salaire_millions_euros_brut,
+    c.salaire_millions_euros AS salaire_millions_euros_consolide,
+    b.buts AS buts_brut,
+    c.buts AS buts_consolides,
+    b.prgp AS prgp_brut,
+    c.prgp AS prgp_consolide,
+    b.ratio AS ratio_brut,
+    c.ratio AS ratio_consolide
 FROM brut_top b
          FULL JOIN consolide_top c ON b.nom_joueur = c.nom_joueur
 WHERE COALESCE(b.rang_brut, 0) <> COALESCE(c.rang_consolide, 0)
-   OR b.nom_joueur <> COALESCE(c.nom_joueur, '')
-   OR b.buts <> COALESCE(c.buts, 0)
-   OR COALESCE(b.buts_par_90, 0) <> COALESCE(c.buts_par_90, 0)
-   OR COALESCE(b.difference_buts_xg, 0) <> COALESCE(c.difference_buts_xg, 0)
-   OR COALESCE(b.prgp_par_90, 0) <> COALESCE(c.prgp_par_90, 0)
+   OR COALESCE(b.nom_joueur, '') <> COALESCE(c.nom_joueur, '')
+   OR COALESCE(b.buts, 0) <> COALESCE(c.buts, 0)
+   OR COALESCE(b.prgp, 0) <> COALESCE(c.prgp, 0)
+   OR COALESCE(b.ratio, 0) <> COALESCE(c.ratio, 0)
+   OR COALESCE(b.salaire_millions_euros, 0) <> COALESCE(c.salaire_millions_euros, 0)
 ORDER BY COALESCE(c.rang_consolide, b.rang_brut);
