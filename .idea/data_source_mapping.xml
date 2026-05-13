@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/sql/comparaison_brut_vs_consolide.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
     <file url="file://$PROJECT_DIR$/sql/import_data.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
     <file url="file://$PROJECT_DIR$/sql/init_database.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
-    <file url="file://$PROJECT_DIR$/sql/requetes.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
+    <file url="file://$PROJECT_DIR$/sql/questions_metier.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
+    <file url="file://$PROJECT_DIR$/sql/questions_metier_consolidees_doublons.sql" value="d6ed759a-0d05-4090-aada-a2c3faf44b06" />
   </component>
 </project>

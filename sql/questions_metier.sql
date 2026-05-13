@@ -43,7 +43,6 @@ ORDER BY total_buts DESC;
 
 
 -- 2. Nombre de matchs joués en moyenne par joueur en L1, par equipe
--- corrigé
 SELECT
     e.nom_equipe AS equipe,
     ROUND(AVG(t.matchs_joues), 2) AS moyenne_matchs_joues_par_joueur
@@ -56,7 +55,6 @@ GROUP BY e.nom_equipe
 ORDER BY moyenne_matchs_joues_par_joueur DESC;
 
 -- 3. Nombre de postes et % du total général pour chaque poste
--- corrigé
 SELECT
     pos.code_position,
     pos.libelle_position,
@@ -72,25 +70,12 @@ FROM position pos
 GROUP BY pos.code_position, pos.libelle_position
 ORDER BY nombre_joueurs DESC;
 
-
--- 4. Nombre de buts moyen marqués par un attaquant
--- corrigé
--- revoir livrable
+-- 4. Nombre moyen de buts marqués par un attaquant
 SELECT
-    j.nom_joueur,
-    e.nom_equipe,
-    p.buts,
-    t.matchs_joues,
-    ROUND(
-            p.buts::numeric / NULLIF(t.matchs_joues, 0),
-            2
-    ) AS moyenne_buts_par_match
+    ROUND(AVG(p.buts), 2) AS moyenne_buts_attaquants
 FROM joueur j
-         JOIN equipe e ON j.id_equipe = e.id_equipe
          JOIN performance p ON j.id_joueur = p.id_joueur
-         JOIN temps_de_jeu t ON j.id_joueur = t.id_joueur
-WHERE j.code_position LIKE '%AT%'
-ORDER BY moyenne_buts_par_match DESC, p.buts DESC, j.nom_joueur;
+WHERE j.code_position LIKE '%AT%';
 
 
 -- 5. Top 10 joueurs avec le plus de penalties marqués + % réussite
@@ -111,7 +96,6 @@ ORDER BY p.penalties_marques DESC, taux_reussite_penalty DESC
 LIMIT 10;
 
 -- 6. Top 10 des buteurs de Ligue 1
--- corrigée
 SELECT
     j.nom_joueur,
     e.nom_equipe,
@@ -123,7 +107,6 @@ ORDER BY p.buts DESC
 LIMIT 10;
 
 -- 7. Temps de jeu moyen par type de poste
--- corrigé
 SELECT
     pos.code_position,
     pos.libelle_position,
@@ -167,7 +150,6 @@ ORDER BY difference_buts_xg DESC
 LIMIT 10;
 
 -- 10. Joueur avec le meilleur PrgP par club
---corrigé
 SELECT
     nom_equipe,
     nom_joueur,
@@ -189,52 +171,46 @@ WHERE rang = 1
 ORDER BY prgp DESC;
 
 -- 11. Shortlist recrutement : 10 attaquants finisseurs, salaire <= 3M€
--- corrigé
+-- Ratio = PrgP / buts
+-- Classement : meilleurs buteurs d'abord, puis ratio le plus faible
+
 WITH candidats AS (
     SELECT
         j.nom_joueur,
         e.nom_equipe,
         ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
         p.buts,
-        ROUND(p.buts::numeric / NULLIF(t.matchs_90, 0), 2) AS buts_par_90,
-        ROUND((p.buts::numeric - a.xg), 2) AS difference_buts_xg,
-        ROUND(pr.progression_passe::numeric / NULLIF(t.matchs_90, 0), 2) AS prgp_par_90
+        pr.progression_passe AS prgp,
+        FLOOR(pr.progression_passe::numeric / NULLIF(p.buts, 0)) AS ratio
     FROM joueur j
-        JOIN equipe e
-          ON j.id_equipe = e.id_equipe
-        JOIN performance p
-          ON j.id_joueur = p.id_joueur
-        JOIN attendu a
-          ON j.id_joueur = a.id_joueur
-        JOIN progression pr
-          ON j.id_joueur = pr.id_joueur
-        JOIN temps_de_jeu t
-          ON j.id_joueur = t.id_joueur
-        JOIN salaire_source s
-          ON j.id_joueur = s.id_joueur
+             JOIN equipe e
+                  ON j.id_equipe = e.id_equipe
+             JOIN performance p
+                  ON j.id_joueur = p.id_joueur
+             JOIN progression pr
+                  ON j.id_joueur = pr.id_joueur
+             JOIN salaire_source s
+                  ON j.id_joueur = s.id_joueur
     WHERE j.code_position LIKE '%AT%'
       AND s.salaire_annuel <= 3000000
       AND p.buts >= 5
-      AND t.matchs_90 > 0
 )
 
 SELECT
-    ROW_NUMBER() OVER (
-ORDER BY
-    buts_par_90 DESC, difference_buts_xg DESC, prgp_par_90 ASC
-) AS rang,
-    nom_joueur,
-    nom_equipe,
-    salaire_millions_euros,
-    buts,
-    buts_par_90,
-    difference_buts_xg,
-    prgp_par_90
+            ROW_NUMBER() OVER (
+        ORDER BY buts DESC, ratio ASC, prgp ASC
+        ) AS rang,
+            nom_joueur,
+            nom_equipe,
+            salaire_millions_euros,
+            buts,
+            prgp,
+            ratio
 FROM candidats
 ORDER BY
-    buts_par_90 DESC,
-    difference_buts_xg DESC,
-    prgp_par_90 ASC
+    buts DESC,
+    ratio ASC,
+    prgp ASC
 LIMIT 10;
 
 -- 12. Analyse complémentaire : joueurs les plus efficaces en buts par 90 minutes
@@ -254,7 +230,6 @@ ORDER BY buts_par_90 DESC
 LIMIT 10;
 
 -- 13. Analyse complémentaire : joueurs avec potentiel offensif et temps de jeu limité
-
 SELECT
     j.nom_joueur,
     e.nom_equipe,
@@ -281,7 +256,6 @@ ORDER BY buts_par_90 DESC, xg_par_90 DESC, difference_buts_xg DESC
 LIMIT 10;
 
 -- 14. Comparaison avec les attaquants les plus utilisés de Ligue 1
-
 SELECT
     j.nom_joueur,
     e.nom_equipe,
