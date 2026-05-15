@@ -172,7 +172,7 @@ ORDER BY prgp DESC;
 
 -- 11. Shortlist recrutement : 10 attaquants finisseurs, salaire <= 3M€
 -- Ratio = PrgP / buts
--- Classement : buts décroissants, puis ratio croissant, puis PrgP croissant
+-- Classement : buts décroissants
 
 WITH candidats AS (
 SELECT j.nom_joueur, e.nom_equipe,
@@ -193,7 +193,7 @@ SELECT j.nom_joueur, e.nom_equipe,
          AND s.salaire_annuel <= 3000000
          AND p.buts >= 5),
 classement AS (SELECT ROW_NUMBER() OVER (
-ORDER BY buts DESC, ratio ASC, prgp ASC
+ORDER BY buts DESC
 ) AS rang, nom_joueur, nom_equipe, salaire_millions_euros,
      buts, prgp, ratio
 FROM candidats)
