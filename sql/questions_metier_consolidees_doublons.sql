@@ -44,7 +44,7 @@ GROUP BY
 -- Contrôle : nombre de lignes avant / après consolidation
 
 SELECT
-    'joueur brut' AS source,
+    'joueurs bruts' AS source,
     COUNT(*) AS nombre_lignes
 FROM joueur
 

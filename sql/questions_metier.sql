@@ -179,7 +179,7 @@ SELECT j.nom_joueur, e.nom_equipe,
        ROUND(s.salaire_annuel::numeric / 1000000, 2) AS salaire_millions_euros,
        p.buts,
        pr.progression_passe AS prgp,
-       FLOOR(pr.progression_passe::numeric / NULLIF(p.buts, 0))::int AS ratio
+       ROUND(pr.progression_passe::numeric / NULLIF(p.buts, 0),2) AS ratio
        FROM joueur j
                 JOIN equipe e
                      ON j.id_equipe = e.id_equipe
